@@ -6,6 +6,8 @@ def concat(*args:str) -> str:
 def joining(*args:str) -> str:
     return " ".join(args)
 
-def format(template:str, args:map) -> str:
-    return template.format(args)
+def formatting(template:str, *args) -> str:
+    return template.format(*args)
 
+def times_string(value:str, time:int) -> str:
+    return value * time 
