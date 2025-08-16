@@ -16,3 +16,13 @@ def get_color(value:str) -> Color | None:
         if color.value.value == value:
             return color
     return None
+
+def can_go_safily(color:Color) -> bool:
+    if color == Color.GREEN:
+        return True
+    elif color == Color.YELLOW:
+        return False
+    elif color == Color.RED:
+        return False
+    else:
+        raise ValueError("Unknown color")
