@@ -1,3 +1,5 @@
+import datetime
+
 class Car:
     def __init__(self, brand:str, model:str, year:int) -> None:
         self.brand = brand
@@ -9,6 +11,14 @@ class Car:
     
     def get_info(self) -> str:
         return f"{self.year} {self.brand} {self.model}"
+    
+    @classmethod
+    def get_latest_instance(cls, brand:str, model:str) -> 'Car':
+        return cls(brand, model, datetime.datetime.now().year)
+
+    @staticmethod
+    def is_latest_model(car: 'Car') -> bool:
+        return car.year == datetime.datetime.now().year
 
 if __name__ == '__main__':
     honda_civic = Car("Honda", "Civic", 2025)
