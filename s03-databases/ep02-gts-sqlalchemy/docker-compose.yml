@@ -1,0 +1,14 @@
+volumes:
+  pydb_s03s02:
+services:
+  db:
+    image: postgres
+    environment:
+      - TZ=Asia/Yangon
+      - POSTGRES_USER=testdb
+      - POSTGRES_PASSWORD=testdb
+      - POSTGRES_DB=testdb
+    ports:
+      - 5432:5432
+    volumes:
+      - pydb_s03s02:/var/lib/postgresql/data
