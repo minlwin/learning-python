@@ -1,5 +1,5 @@
 volumes:
-  pydb_s03e03:
+  database:
 
 services:
   db:
@@ -12,4 +12,4 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - pydb_s03e03:/var/lib/postgresql/data
+      - database:/var/lib/postgresql/data
