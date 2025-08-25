@@ -1,6 +1,5 @@
 from src.ls01_get_type import get_type
 
-
 def test_get_type() :
     result = get_type(False)
     assert result == 'bool'
